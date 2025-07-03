@@ -1,0 +1,3 @@
+displayName = Test Mod
+author = tomat
+version = 0.1

@@ -1,0 +1,21 @@
+# This file will automatically update with entries for new content after a build and reload.
+
+Items: {
+	LeafSword: {
+		DisplayName: Leaf Sword
+		Tooltip: It's definitely leafing today...
+	}
+
+	Tree: {
+		DisplayName: Tree
+		Tooltip: There is nothing more, treely!
+	}
+}
+
+NPCs: {
+	TestBoss.DisplayName: Frustrated Tomato
+	SecondBoss.DisplayName: Second Boss
+	Propeller.DisplayName: Propeller
+}
+
+Projectiles.Acorn.DisplayName: Acorn
