@@ -1,0 +1,38 @@
+# This file will automatically update with entries for new content after a build and reload.
+
+Items: {
+	LeafSword: {
+		DisplayName: Лиственный меч
+		Tooltip: Сегодня действительно лиственно...
+	}
+
+	Tree: {
+		DisplayName: Дерево
+		Tooltip: Здесь точно больше ничего нет, дуб даю!
+	}
+
+	TomatoSeeds: {
+		Tooltip: ""
+		DisplayName: Семена помидора
+	}
+
+	Tomato: {
+		Tooltip: Вкуснятина!
+		DisplayName: Помидор
+		RestoreLifeText: Mods.test_mod.Items.Tomato.RestoreLifeText
+	}
+
+	Vessel: {
+		DisplayName: Сосуд
+		Tooltip: Какая-то энергия пульсирует через него...
+	}
+}
+
+NPCs: {
+	TestBoss.DisplayName: Недовольный Томат
+	SecondBoss.DisplayName: Second Boss
+	Propeller.DisplayName: Propeller
+}
+
+Projectiles.Acorn.DisplayName: Жёлудь
+Tiles.TomatoPlant.MapEntry: Росток Томата
