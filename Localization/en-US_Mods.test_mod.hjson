@@ -10,6 +10,22 @@ Items: {
 		DisplayName: Tree
 		Tooltip: There is nothing more, treely!
 	}
+
+	TomatoSeeds: {
+		Tooltip: ""
+		DisplayName: Tomato Seeds
+	}
+
+	Tomato: {
+		Tooltip: Yummy!
+		DisplayName: Tomato
+		RestoreLifeText: Mods.test_mod.Items.Tomato.RestoreLifeText
+	}
+
+	Vessel: {
+		DisplayName: Vessel
+		Tooltip: A somewhat energy pulsates through it...
+	}
 }
 
 NPCs: {
@@ -19,3 +35,4 @@ NPCs: {
 }
 
 Projectiles.Acorn.DisplayName: Acorn
+Tiles.TomatoPlant.MapEntry: Tomato Plant
