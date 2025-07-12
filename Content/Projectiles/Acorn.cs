@@ -2,7 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace test_mod.Content.Projectiles
+namespace DoodleMod.Content.Projectiles
 {
     public class Acorn : ModProjectile
     {

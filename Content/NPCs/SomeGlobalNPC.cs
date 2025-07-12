@@ -2,9 +2,9 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
-using test_mod.Content.Items.Placeable;
+using DoodleMod.Content.Items.Placeable;
 
-namespace test_mod.Content.NPCs
+namespace DoodleMod.Content.NPCs
 {
     internal class SomeGlobalNPC : GlobalNPC
     {

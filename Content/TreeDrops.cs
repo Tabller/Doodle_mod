@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace test_mod.Content
+namespace DoodleMod.Content
 {
     internal class TreeDrops : GlobalTile
     {

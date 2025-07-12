@@ -1,5 +1,5 @@
-﻿using test_mod.Content.Items;
-using test_mod.Content.Items.Placeable;
+﻿using DoodleMod.Content.Items;
+using DoodleMod.Content.Items.Placeable;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
@@ -9,9 +9,9 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-using test_mod.Content.Consumables;
+using DoodleMod.Content.Consumables;
 
-namespace test_mod.Content.Items.Placeable.Tiles
+namespace DoodleMod.Content.Items.Placeable.Tiles
 {
     public enum PlantStage : byte
     {

@@ -19,7 +19,7 @@ Items: {
 	Tomato: {
 		Tooltip: Yummy!
 		DisplayName: Tomato
-		RestoreLifeText: Mods.test_mod.Items.Tomato.RestoreLifeText
+		RestoreLifeText: Mods.DoodleMod.Items.Tomato.RestoreLifeText
 	}
 
 	Vessel: {

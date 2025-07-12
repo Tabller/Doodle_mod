@@ -9,7 +9,7 @@ using Terraria.Graphics.CameraModifiers;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace test_mod.Content.NPCs.TestBoss
+namespace DoodleMod.Content.NPCs.TestBoss
 {
     [AutoloadBossHead] // This attribute looks for a texture called "ClassName_Head_Boss" and automatically registers it as the NPC boss head icon
     public class TestBoss : ModNPC
@@ -56,7 +56,7 @@ namespace test_mod.Content.NPCs.TestBoss
             // Influences how the NPC looks in the Bestiary
             NPCID.Sets.NPCBestiaryDrawModifiers drawModifiers = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
-                CustomTexturePath = "test_mod/Assets/Textures/Bestiary/TestBoss_Preview",
+                CustomTexturePath = "DoodleMod/Assets/Textures/Bestiary/TestBoss_Preview",
                 PortraitScale = 0.7f, // Portrait refers to the full picture when clicking on the icon in the bestiary
                 PortraitPositionYOverride = 0f,
             };

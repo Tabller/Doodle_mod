@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using System;
 using Terraria;
 using Terraria.Audio;
 using Terraria.GameContent.Bestiary;
@@ -7,7 +8,7 @@ using Terraria.Graphics.CameraModifiers;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace test_mod.Content.NPCs.SecondBoss
+namespace DoodleMod.Content.NPCs.SecondBoss
 {
     public class SecondBoss : ModNPC
     {
@@ -118,7 +119,23 @@ namespace test_mod.Content.NPCs.SecondBoss
         {
             Player player = Main.player[NPC.target];
 
-            // this is hard
+            float timer = NPC.ai[0]++;
+            float radius = 100f;
+            float speed = 0.05f;
+            float angle = MathHelper.Lerp(0, MathHelper.Pi, timer * speed);
+
+            Vector2 circularOffset = new Vector2((float)Math.Cos(angle), (float)Math.Sin(angle)) * radius;
+
+            Vector2 basePosition = NPC.Center;
+
+            Vector2 targetPosition = basePosition + circularOffset;
+
+
+            float inertia = 10f;
+            Vector2 direction = targetPosition - NPC.Center;
+            direction.Normalize();
+            NPC.velocity = (NPC.velocity * (inertia - 1) + direction * 4f) / inertia;
+
         }
         public override void AI()
         {

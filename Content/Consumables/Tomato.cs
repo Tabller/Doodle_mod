@@ -7,7 +7,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace test_mod.Content.Consumables
+namespace DoodleMod.Content.Consumables
 {
     internal class Tomato : ModItem
     {

@@ -5,9 +5,9 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using test_mod.Content.Projectiles;
+using DoodleMod.Content.Projectiles;
 
-namespace test_mod.Content.Items.Weapons
+namespace DoodleMod.Content.Items.Weapons
 {
     public class Tree : ModItem
     {

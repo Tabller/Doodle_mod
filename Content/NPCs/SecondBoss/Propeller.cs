@@ -8,7 +8,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace test_mod.Content.NPCs.SecondBoss
+namespace DoodleMod.Content.NPCs.SecondBoss
 {
     public class Propeller : ModNPC
     {

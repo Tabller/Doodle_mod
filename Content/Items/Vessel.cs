@@ -1,10 +1,10 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using test_mod.Content.Consumables;
-using test_mod.Content.NPCs.TestBoss;
+using DoodleMod.Content.Consumables;
+using DoodleMod.Content.NPCs.TestBoss;
 
-namespace test_mod.Content.Items
+namespace DoodleMod.Content.Items
 {
     internal class Vessel : ModItem
     {

@@ -3,7 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 
 
-namespace test_mod.Content.Items.Placeable
+namespace DoodleMod.Content.Items.Placeable
 {
     internal class TomatoSeeds : ModItem
     {
