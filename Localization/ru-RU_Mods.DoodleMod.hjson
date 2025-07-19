@@ -26,13 +26,30 @@ Items: {
 		DisplayName: Сосуд
 		Tooltip: Какая-то энергия пульсирует через него...
 	}
+
+	TomatoBossBag: {
+		DisplayName: Мешок с сокровищами (недовольный томат)
+		Tooltip: Что же может быть внутри?
+	}
 }
 
 NPCs: {
-	TestBoss.DisplayName: Недовольный Томат
+	FrustratedTomatoBody.DisplayName: Недовольный Томат
 	SecondBoss.DisplayName: Second Boss
 	Propeller.DisplayName: Propeller
 }
 
 Projectiles.Acorn.DisplayName: Жёлудь
 Tiles.TomatoPlant.MapEntry: Росток Томата
+
+Biomes: {
+	DoodleBiome: {
+		// DisplayName: Doodle Biome
+		// TownNPCDialogueName: the Doodle Biome
+	}
+
+	ExampleUndergroundBiome: {
+		// DisplayName: Example Underground Biome
+		// TownNPCDialogueName: the Example Underground Biome
+	}
+}

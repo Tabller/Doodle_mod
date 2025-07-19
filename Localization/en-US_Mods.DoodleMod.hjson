@@ -26,13 +26,30 @@ Items: {
 		DisplayName: Vessel
 		Tooltip: A somewhat energy pulsates through it...
 	}
+
+	TomatoBossBag: {
+		DisplayName: Tomato Boss Bag
+		Tooltip: What can be inside?
+	}
 }
 
 NPCs: {
-	TestBoss.DisplayName: Frustrated Tomato
+	FrustratedTomatoBody.DisplayName: Frustrated Tomato
 	SecondBoss.DisplayName: Second Boss
 	Propeller.DisplayName: Propeller
 }
 
 Projectiles.Acorn.DisplayName: Acorn
 Tiles.TomatoPlant.MapEntry: Tomato Plant
+
+Biomes: {
+	DoodleBiome: {
+		DisplayName: Doodle Biome
+		TownNPCDialogueName: the Doodle Biome
+	}
+
+	ExampleUndergroundBiome: {
+		DisplayName: Example Underground Biome
+		TownNPCDialogueName: the Example Underground Biome
+	}
+}

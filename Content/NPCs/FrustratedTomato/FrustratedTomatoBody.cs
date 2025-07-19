@@ -1,3 +1,4 @@
+using DoodleMod.Content.Items;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
@@ -9,10 +10,10 @@ using Terraria.Graphics.CameraModifiers;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace DoodleMod.Content.NPCs.TestBoss
+namespace DoodleMod.Content.NPCs.FrustratedTomato
 {
     [AutoloadBossHead] // This attribute looks for a texture called "ClassName_Head_Boss" and automatically registers it as the NPC boss head icon
-    public class TestBoss : ModNPC
+    public class FrustratedTomatoBody : ModNPC
     {
 
         private int Phase = 1;
@@ -56,7 +57,7 @@ namespace DoodleMod.Content.NPCs.TestBoss
             // Influences how the NPC looks in the Bestiary
             NPCID.Sets.NPCBestiaryDrawModifiers drawModifiers = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
-                CustomTexturePath = "DoodleMod/Assets/Textures/Bestiary/TestBoss_Preview",
+                CustomTexturePath = "DoodleMod/Assets/Textures/Bestiary/FrustratedTomato_Preview",
                 PortraitScale = 0.7f, // Portrait refers to the full picture when clicking on the icon in the bestiary
                 PortraitPositionYOverride = 0f,
             };
@@ -97,6 +98,33 @@ namespace DoodleMod.Content.NPCs.TestBoss
 				new FlavorTextBestiaryInfoElement("When a Doodle World is in danger, it's time to take some tough action!")
                 // new BestiaryPortraitBackgroundProviderPreferenceInfoElement()
             });
+        }
+
+        public override void ModifyNPCLoot(NPCLoot npcLoot)
+        {
+            // Do NOT misuse the ModifyNPCLoot and OnKill hooks: the former is only used for registering drops, the latter for everything else
+
+            // The order in which you add loot will appear as such in the Bestiary. To mirror vanilla boss order:
+            // 1. Trophy
+            // 2. Classic Mode ("not expert")
+            // 3. Expert Mode (usually just the treasure bag)
+            // 4. Master Mode (relic first, pet last, everything else in between)
+
+
+            // All the Classic Mode drops here are based on "not expert", meaning we use .OnSuccess() to add them into the rule, which then gets added
+            LeadingConditionRule notExpertRule = new LeadingConditionRule(new Conditions.NotExpert());
+
+
+            // This part is not required for a boss and is just showcasing some advanced stuff you can do with drop rules to control how items spawn
+            // We make 12-15 ExampleItems spawn randomly in all directions, like the lunar pillar fragments. Hereby we need the DropOneByOne rule,
+            // which requires these parameters to be defined
+
+            // Finally add the leading rule
+            npcLoot.Add(notExpertRule);
+
+            // Add the treasure bag using ItemDropRule.BossBag (automatically checks for expert mode)
+            npcLoot.Add(ItemDropRule.BossBag(ModContent.ItemType<TomatoBossBag>()));
+
         }
         public override bool CanHitPlayer(Player target, ref int cooldownSlot)
         {
@@ -174,15 +202,17 @@ namespace DoodleMod.Content.NPCs.TestBoss
             }
             if (State == ProjectileWrathState)
             {
+                NPC.dontTakeDamage = true;
                 ProjectileWrath();
                 if (Timer == 60 * 15)
                 {
-                    Timer = 0;
+                    Timer = 0; 
                     State = CircleProjectileState;
                 }
             }
             if (State == CircleProjectileState)
             {
+                NPC.dontTakeDamage = false;
                 CircleProjectile();
                 if (Timer == 60 * 5)
                 {

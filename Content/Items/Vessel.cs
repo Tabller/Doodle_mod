@@ -2,7 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using DoodleMod.Content.Consumables;
-using DoodleMod.Content.NPCs.TestBoss;
+using DoodleMod.Content.NPCs.FrustratedTomato;
 
 namespace DoodleMod.Content.Items
 {
@@ -28,7 +28,7 @@ namespace DoodleMod.Content.Items
 
         public override bool? UseItem(Player player)
         {
-            NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<TestBoss>());
+            NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<FrustratedTomatoBody>());
             return true;
         }
 
